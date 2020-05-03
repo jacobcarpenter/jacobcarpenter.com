@@ -12,6 +12,7 @@ export function PageHeader({ maxWidth }) {
 			pb={[4]}
 			bg="primary"
 			fontSize={[4]}
+			boxShadow="0 2px 2px 1px rgba(0, 0, 0, 0.2)"
 		>
 			<Box flex="1" maxWidth={maxWidth}>
 				<Text
