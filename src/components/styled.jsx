@@ -73,7 +73,7 @@ export function Anchor({ children, external, ...props }) {
 			{children}
 			{/* has to be an inline svg for currentColor to work; can't insert as ::after content 😢 */}
 			{external && (
-				<Box display="inline-block" ml={1}>
+				<Box as="span" display="inline-block" ml={1}>
 					<ExternalLink />
 				</Box>
 			)}

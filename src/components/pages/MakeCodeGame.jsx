@@ -28,13 +28,17 @@ export function MakeCodeGame({ game }) {
 				gridGap={[4]}
 			>
 				<GameHost shareId={game.shareId} />
-				<Description description={game.longDescription} />
+				<Description
+					title={game.title}
+					description={game.longDescription}
+					forumPost={game.forumPost}
+				/>
 			</Box>
 		</Stack>
 	);
 }
 
-function GameHost({ shareId }) {
+function GameHost({ shareId, title }) {
 	return (
 		<Box maxWidth={400}>
 			<div
@@ -64,14 +68,24 @@ function GameHost({ shareId }) {
 	);
 }
 
-function Description({ description }) {
+function Description({ title, description, forumPost }) {
 	return (
-		<Box css="*:first-child { margin-block-start: 0 }">
-			<ReactMarkdown
-				source={description}
-				escapeHtml={false}
-				renderers={renderers}
-			/>
-		</Box>
+		<Stack>
+			<Box as="header" fontWeight="bold" fontSize={[4]}>
+				{title}
+			</Box>
+			<Box>
+				<Anchor external href={forumPost}>
+					forum thread
+				</Anchor>
+			</Box>
+			<Box mt={[4]}>
+				<ReactMarkdown
+					source={description}
+					escapeHtml={false}
+					renderers={renderers}
+				/>
+			</Box>
+		</Stack>
 	);
 }
