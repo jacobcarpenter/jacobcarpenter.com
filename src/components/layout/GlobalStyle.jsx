@@ -33,10 +33,16 @@ export const GlobalStyle = createGlobalStyle`
 		margin: 0;
 		padding: 0;
 
+		margin-bottom: 4em;
+
         color: ${({ theme }) => theme.colors.text};
 		background: ${({ theme }) => theme.colors.pageBackground};
 
 		font-family: 'Noto Sans', sans-serif;
 		font-size: 18px;
+
+		> * {
+			box-sizing: border-box;
+		}
 	}
 `;

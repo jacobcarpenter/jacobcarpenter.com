@@ -4,7 +4,7 @@ import { GlobalStyle } from './GlobalStyle';
 import { PageHeader } from './PageHeader';
 import { Box, theme } from '../styled';
 
-const maxWidth = [550];
+const maxWidth = [600];
 
 export function PageLayout({ children }) {
 	return (

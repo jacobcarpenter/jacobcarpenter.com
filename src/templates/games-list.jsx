@@ -1,11 +1,11 @@
 import React from 'react';
-import { MakeCodeGamesList } from '../components/pages/MakeCodeGamesList';
+import { GamesList } from '../components/pages/GamesList';
 import { PageLayout } from '../components/layout/PageLayout';
 
 export default function ({ pageContext: { games } }) {
 	return (
 		<PageLayout>
-			<MakeCodeGamesList games={games} />
+			<GamesList games={games} />
 		</PageLayout>
 	);
 }
