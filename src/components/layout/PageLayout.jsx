@@ -4,15 +4,13 @@ import { GlobalStyle } from './GlobalStyle';
 import { PageHeader } from './PageHeader';
 import { Box, theme } from '../styled';
 
-const maxWidth = [600];
-
-export function PageLayout({ children }) {
+export function PageLayout({ children, width = 600 }) {
 	return (
 		<ThemeProvider theme={theme}>
 			<GlobalStyle />
-			<PageHeader maxWidth={maxWidth} />
-			<Box mt={[3]} display="flex" justifyContent="center">
-				<Box flex="1" maxWidth={maxWidth}>
+			<PageHeader maxWidth={600} />
+			<Box mt={[3]} mx={[3]} display="flex" justifyContent="center">
+				<Box flex="1" maxWidth={width}>
 					{children}
 				</Box>
 			</Box>

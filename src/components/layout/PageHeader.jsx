@@ -9,6 +9,7 @@ export function PageHeader({ maxWidth }) {
 			display="flex"
 			justifyContent="center"
 			pt={[4, 5]}
+			px={[3]}
 			pb={[4]}
 			bg="primary"
 			fontSize={[4]}
