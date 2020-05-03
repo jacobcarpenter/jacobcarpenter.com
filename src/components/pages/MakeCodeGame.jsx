@@ -3,6 +3,17 @@ import { Link } from 'gatsby';
 import ReactMarkdown from 'react-markdown';
 import { Box, Stack, Anchor } from '../styled';
 
+const renderers = {
+	link: function ({ href, children }) {
+		return (
+			// TODO: detect non-external links
+			<Anchor external href={href}>
+				{children}
+			</Anchor>
+		);
+	},
+};
+
 export function MakeCodeGame({ game }) {
 	return (
 		<Stack spacing={[3]}>
@@ -56,7 +67,11 @@ function GameHost({ shareId }) {
 function Description({ description }) {
 	return (
 		<Box css="*:first-child { margin-block-start: 0 }">
-			<ReactMarkdown escapeHtml={false} source={description} />
+			<ReactMarkdown
+				source={description}
+				escapeHtml={false}
+				renderers={renderers}
+			/>
 		</Box>
 	);
 }
