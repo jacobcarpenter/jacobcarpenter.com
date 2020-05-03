@@ -4,7 +4,7 @@ import { PageLayout } from '../components/layout/PageLayout';
 
 export default function ({ pageContext: { game } }) {
 	return (
-		<PageLayout width={680}>
+		<PageLayout width={[600, null, 680]}>
 			<MakeCodeGame game={game} />
 		</PageLayout>
 	);

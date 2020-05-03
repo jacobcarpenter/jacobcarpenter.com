@@ -4,7 +4,12 @@ import { Box } from '../styled';
 
 export function MakeCodeGame({ game }) {
 	return (
-		<Box mt={[3]} display="grid" gridTemplateColumns="360px 1fr" gridGap={[4]}>
+		<Box
+			mt={[3]}
+			display="grid"
+			gridTemplateColumns={['1fr', null, '360px 1fr']}
+			gridGap={[4]}
+		>
 			<GameHost shareId={game.shareId} />
 			<Description description={game.longDescription} />
 		</Box>
@@ -13,29 +18,31 @@ export function MakeCodeGame({ game }) {
 
 function GameHost({ shareId }) {
 	return (
-		<div
-			style={{
-				position: 'relative',
-				height: 0,
-				paddingBottom: '117.6%',
-				overflow: 'hidden',
-			}}
-		>
-			<iframe
-				title="makecode arcade"
+		<Box maxWidth={400}>
+			<div
 				style={{
-					position: 'absolute',
-					top: 0,
-					left: 0,
-					width: '100%',
-					height: '100%',
+					position: 'relative',
+					height: 0,
+					paddingBottom: '117.6%',
+					overflow: 'hidden',
 				}}
-				src={`https://arcade.makecode.com/---run?id=${shareId}&nofooter=1&embed=1`}
-				allowFullScreen="allowfullscreen"
-				sandbox="allow-popups allow-forms allow-scripts allow-same-origin"
-				frameBorder="0"
-			></iframe>
-		</div>
+			>
+				<iframe
+					title="makecode arcade"
+					style={{
+						position: 'absolute',
+						top: 0,
+						left: 0,
+						width: '100%',
+						height: '100%',
+					}}
+					src={`https://arcade.makecode.com/---run?id=${shareId}&nofooter=1&embed=1`}
+					allowFullScreen="allowfullscreen"
+					sandbox="allow-popups allow-forms allow-scripts allow-same-origin"
+					frameBorder="0"
+				></iframe>
+			</div>
+		</Box>
 	);
 }
 
