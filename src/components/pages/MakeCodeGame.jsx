@@ -1,18 +1,25 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import ReactMarkdown from 'react-markdown';
-import { Box } from '../styled';
+import { Box, Stack, Anchor } from '../styled';
 
 export function MakeCodeGame({ game }) {
 	return (
-		<Box
-			mt={[3]}
-			display="grid"
-			gridTemplateColumns={['1fr', null, '360px 1fr']}
-			gridGap={[4]}
-		>
-			<GameHost shareId={game.shareId} />
-			<Description description={game.longDescription} />
-		</Box>
+		<Stack spacing={[3]}>
+			<Box maxWidth={[600]} mx="auto">
+				<Anchor as={Link} to="/makecode">
+					← Games
+				</Anchor>
+			</Box>
+			<Box
+				display="grid"
+				gridTemplateColumns={['1fr', null, '360px 1fr']}
+				gridGap={[4]}
+			>
+				<GameHost shareId={game.shareId} />
+				<Description description={game.longDescription} />
+			</Box>
+		</Stack>
 	);
 }
 

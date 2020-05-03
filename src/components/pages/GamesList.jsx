@@ -6,8 +6,11 @@ import { Box, Stack, Anchor } from '../styled';
 export function GamesList({ games }) {
 	return (
 		<Stack spacing={[3]}>
+			<Anchor as={Link} to="/">
+				← Home
+			</Anchor>
 			<Box>
-				Lately, I‘ve been having a lot of fun building games with{' '}
+				I‘ve been having a lot of fun building games with{' '}
 				<Anchor external href="https://arcade.makecode.com">
 					makecode arcade
 				</Anchor>

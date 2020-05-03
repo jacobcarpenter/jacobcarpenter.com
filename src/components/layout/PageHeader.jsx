@@ -20,6 +20,7 @@ export function PageHeader({ maxWidth }) {
 					fontFamily="'Quicksand', sans-serif"
 					fontWeight="bold"
 					textTransform="lowercase"
+					textShadow="2px 2px 6px #1D1924"
 				>
 					<Anchor as={Link} to="/" color="primaryText">
 						Jacob Carpenter [dot] com

@@ -53,6 +53,7 @@ export const Stack = styled(Box)`
 export const Text = styled.span`
 	${color}
 	${typography}
+	${shadow}
 
     ${system({
 			textDecoration: true,
