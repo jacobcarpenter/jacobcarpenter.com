@@ -39,7 +39,7 @@ export const GlobalStyle = createGlobalStyle`
 		background: ${({ theme }) => theme.colors.pageBackground};
 
 		font-family: 'Noto Sans', sans-serif;
-		font-size: 18px;
+		font-size: ${({ theme }) => theme.fontSizes[2]}
 
 		> * {
 			box-sizing: border-box;

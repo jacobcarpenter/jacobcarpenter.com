@@ -48,7 +48,7 @@ function GameHost({ shareId }) {
 
 function Description({ description }) {
 	return (
-		<Box fontSize="14px" css="*:first-child { margin-block-start: 0 }">
+		<Box css="*:first-child { margin-block-start: 0 }">
 			<ReactMarkdown escapeHtml={false} source={description} />
 		</Box>
 	);

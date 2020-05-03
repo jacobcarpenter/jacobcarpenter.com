@@ -25,6 +25,7 @@ export const theme = {
 		hyperlink: '#795377',
 		hyperlinkHoverText: '#ffffff',
 	},
+	fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 72],
 };
 
 export const Box = styled.div`
