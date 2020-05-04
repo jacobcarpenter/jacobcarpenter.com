@@ -33,7 +33,7 @@ function GamesListGame({ game, flipped }) {
 			variant="bare"
 		>
 			<GameBox flipped={flipped}>
-				<Box width={[100, null, 160]} lineHeight="0">
+				<Box width={[100, 160]} lineHeight="0">
 					<Screenshot width="100%" src={game.screenshot} />
 				</Box>
 				<Stack spacing={[2]}>

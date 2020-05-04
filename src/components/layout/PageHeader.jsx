@@ -22,7 +22,13 @@ export function PageHeader({ maxWidth }) {
 					textTransform="lowercase"
 					textShadow="2px 2px 6px #1D1924"
 				>
-					<Anchor as={Link} to="/" color="primaryText">
+					<Anchor
+						as={Link}
+						to="/"
+						color="primaryText"
+						m="-1px -6px"
+						p="1px 6px"
+					>
 						Jacob Carpenter [dot] com
 					</Anchor>
 				</Text>

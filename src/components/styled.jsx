@@ -101,6 +101,7 @@ export const StyledAnchor = styled.a`
 		},
 	})}
 
+	${space}
     ${layout}
     ${color}
 	${typography}
