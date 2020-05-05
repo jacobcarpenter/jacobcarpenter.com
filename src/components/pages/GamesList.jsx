@@ -34,7 +34,7 @@ function GamesListGame({ game, flipped }) {
 		>
 			<GameBox flipped={flipped}>
 				<Box width={[100, 160]} lineHeight="0">
-					<Screenshot width="100%" src={game.screenshot} />
+					<Screenshot width="160" height="120" src={game.screenshot} />
 				</Box>
 				<Stack spacing={[2]}>
 					<Box>{game.title}</Box>
@@ -98,7 +98,14 @@ const GameBoxGrid = styled(Box)`
 		`}
 `;
 
-const Screenshot = styled.img.attrs(() => ({ alt: '' }))`
+const Screenshot = styled.img.attrs(({ width, height }) => ({
+	alt: '',
+	width,
+	height,
+}))`
 	image-rendering: pixelated;
 	image-rendering: crisp-edges;
+
+	max-width: 100%;
+	height: auto;
 `;
