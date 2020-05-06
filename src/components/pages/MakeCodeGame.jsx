@@ -15,6 +15,8 @@ const renderers = {
 };
 
 export function MakeCodeGame({ game }) {
+	const embedURL = getEmbedUrl(game);
+
 	return (
 		<Stack spacing={[3]}>
 			<Box maxWidth={[600]} mx="auto">
@@ -27,7 +29,7 @@ export function MakeCodeGame({ game }) {
 				gridTemplateColumns={['1fr', null, '360px 1fr']}
 				gridGap={[4]}
 			>
-				<GameHost shareId={game.shareId} />
+				<GameHost embedURL={embedURL} />
 				<Description
 					title={game.title}
 					description={game.longDescription}
@@ -38,7 +40,7 @@ export function MakeCodeGame({ game }) {
 	);
 }
 
-function GameHost({ shareId, title }) {
+function GameHost({ embedURL }) {
 	return (
 		<Box maxWidth={400}>
 			<div
@@ -58,7 +60,7 @@ function GameHost({ shareId, title }) {
 						width: '100%',
 						height: '100%',
 					}}
-					src={`https://arcade.makecode.com/---run?id=${shareId}&nofooter=1&embed=1`}
+					src={embedURL}
 					allowFullScreen="allowfullscreen"
 					sandbox="allow-popups allow-forms allow-scripts allow-same-origin"
 					frameBorder="0"
@@ -88,4 +90,13 @@ function Description({ title, description, forumPost }) {
 			</Box>
 		</Stack>
 	);
+}
+
+function getEmbedUrl({ gitHubProject, shareId }) {
+	if (gitHubProject) {
+		const [owner, project] = gitHubProject.split('/');
+		return `https://${owner}.github.io/${project}/?embed=1&nofooter=1`;
+	}
+
+	return `https://arcade.makecode.com/---run?id=${shareId}&nofooter=1&embed=1`;
 }
