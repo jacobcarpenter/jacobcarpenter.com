@@ -1,5 +1,13 @@
 [
 	{
+		"title": "Garden Crop Duster",
+		"screenshot": "/garden-crop-duster.png",
+		"forumPost": "https://forum.makecode.com/t/charred-earth-tank-game-update/1662",
+		"gitHubProject": "jacobcarpenter/garden-crop-duster",
+		"shortDescription": "Sometimes, the best way to deliver fertilizer… is with a biplane!",
+		"longDescription": "### Controls\n\n**L**, **R**: roll plane\n**D**: pitch up\n**U**: pitch down\n**A**: drop ~~bom~~… er… fertilizer!\n\nThe controls *will* feel weird starting out; but you can master them! Good luck!"
+	},
+	{
 		"title": "Charred Earth",
 		"screenshot": "/charred-earth.png",
 		"forumPost": "https://forum.makecode.com/t/charred-earth-tank-game-update/1662",
